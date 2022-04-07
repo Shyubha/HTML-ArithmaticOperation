@@ -1,0 +1,23 @@
+ <p>UserId <input type="Text" id="userId" name="uid" /> </p>
+       <p>PassWord<input type="password" id="password" name="pass" /> </P>
+       <p> <button type="button" value="Log In" onclick="log()">Log In</button> </p>   
+
+    <script>
+        function log()
+        {
+            var UserId = document.getElementById("userId").value;
+            var password = document.getElementById("password").value;
+            var Uid = localStorage.getItem("UserId");
+            var passs = localStorage.getItem("Password");
+            if (UserId === Uid && password === passs) {
+                alert("Log In Successful");
+            }
+            else
+            {
+                alert("Log In failed");
+            }
+
+        }
+
+    </script>
+   
